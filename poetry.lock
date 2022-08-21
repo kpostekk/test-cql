@@ -1,0 +1,159 @@
+[[package]]
+name = "anyio"
+version = "3.6.1"
+description = "High level compatibility layer for multiple asynchronous event loop implementations"
+category = "main"
+optional = false
+python-versions = ">=3.6.2"
+
+[package.dependencies]
+idna = ">=2.8"
+sniffio = ">=1.1"
+
+[package.extras]
+doc = ["packaging", "sphinx-rtd-theme", "sphinx-autodoc-typehints (>=1.2.0)"]
+test = ["coverage[toml] (>=4.5)", "hypothesis (>=4.0)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "contextlib2", "uvloop (<0.15)", "mock (>=4)", "uvloop (>=0.15)"]
+trio = ["trio (>=0.16)"]
+
+[[package]]
+name = "click"
+version = "8.1.3"
+description = "Composable command line interface toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
+name = "colorama"
+version = "0.4.5"
+description = "Cross-platform colored terminal text."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "fastapi"
+version = "0.79.1"
+description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+category = "main"
+optional = false
+python-versions = ">=3.6.1"
+
+[package.dependencies]
+pydantic = ">=1.6.2,<1.7 || >1.7,<1.7.1 || >1.7.1,<1.7.2 || >1.7.2,<1.7.3 || >1.7.3,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0"
+starlette = "0.19.1"
+
+[package.extras]
+test = ["types-dataclasses (==0.6.5)", "types-orjson (==3.6.2)", "types-ujson (==4.2.1)", "anyio[trio] (>=3.2.1,<4.0.0)", "flask (>=1.1.2,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,<6.0.0)", "orjson (>=3.2.1,<4.0.0)", "databases[sqlite] (>=0.3.2,<0.6.0)", "peewee (>=3.13.3,<4.0.0)", "sqlalchemy (>=1.3.18,<1.5.0)", "email_validator (>=1.1.1,<2.0.0)", "httpx (>=0.14.0,<0.19.0)", "requests (>=2.24.0,<3.0.0)", "isort (>=5.0.6,<6.0.0)", "black (==22.3.0)", "flake8 (>=3.8.3,<4.0.0)", "mypy (==0.910)", "pytest-cov (>=2.12.0,<4.0.0)", "pytest (>=6.2.4,<7.0.0)"]
+doc = ["pyyaml (>=5.3.1,<7.0.0)", "typer (>=0.4.1,<0.5.0)", "mkdocs-markdownextradata-plugin (>=0.1.7,<0.3.0)", "mdx-include (>=1.4.1,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "mkdocs (>=1.1.2,<2.0.0)"]
+dev = ["pre-commit (>=2.17.0,<3.0.0)", "uvicorn[standard] (>=0.12.0,<0.18.0)", "flake8 (>=3.8.3,<4.0.0)", "autoflake (>=1.4.0,<2.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "python-jose[cryptography] (>=3.3.0,<4.0.0)"]
+all = ["uvicorn[standard] (>=0.12.0,<0.18.0)", "email_validator (>=1.1.1,<2.0.0)", "orjson (>=3.2.1,<4.0.0)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,<6.0.0)", "pyyaml (>=5.3.1,<7.0.0)", "itsdangerous (>=1.1.0,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "jinja2 (>=2.11.2,<4.0.0)", "requests (>=2.24.0,<3.0.0)"]
+
+[[package]]
+name = "h11"
+version = "0.13.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "idna"
+version = "3.3"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "pydantic"
+version = "1.9.2"
+description = "Data validation and settings management using python type hints"
+category = "main"
+optional = false
+python-versions = ">=3.6.1"
+
+[package.dependencies]
+typing-extensions = ">=3.7.4.3"
+
+[package.extras]
+email = ["email-validator (>=1.0.3)"]
+dotenv = ["python-dotenv (>=0.10.4)"]
+
+[[package]]
+name = "sniffio"
+version = "1.2.0"
+description = "Sniff out which async library your code is running under"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "starlette"
+version = "0.19.1"
+description = "The little ASGI library that shines."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+anyio = ">=3.4.0,<5"
+
+[package.extras]
+full = ["requests", "pyyaml", "python-multipart", "jinja2", "itsdangerous"]
+
+[[package]]
+name = "typing-extensions"
+version = "4.3.0"
+description = "Backported and Experimental Type Hints for Python 3.7+"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "uvicorn"
+version = "0.18.2"
+description = "The lightning-fast ASGI server."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+click = ">=7.0"
+h11 = ">=0.8"
+
+[package.extras]
+standard = ["colorama (>=0.4)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "PyYAML (>=5.1)", "python-dotenv (>=0.13)", "watchfiles (>=0.13)", "httptools (>=0.4.0)", "websockets (>=10.0)"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "373e595e2af449f4c75540daea8b2066c44e1859f1970d4002a1b9af639af32c"
+
+[metadata.files]
+anyio = [
+    {file = "anyio-3.6.1-py3-none-any.whl", hash = "sha256:cb29b9c70620506a9a8f87a309591713446953302d7d995344d0d7c6c0c9a7be"},
+    {file = "anyio-3.6.1.tar.gz", hash = "sha256:413adf95f93886e442aea925f3ee43baa5a765a64a0f52c6081894f9992fdd0b"},
+]
+click = []
+colorama = [
+    {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
+    {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
+]
+fastapi = []
+h11 = []
+idna = [
+    {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
+    {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
+]
+pydantic = []
+sniffio = [
+    {file = "sniffio-1.2.0-py3-none-any.whl", hash = "sha256:471b71698eac1c2112a40ce2752bb2f4a4814c22a54a3eed3676bc0f5ca9f663"},
+    {file = "sniffio-1.2.0.tar.gz", hash = "sha256:c4666eecec1d3f50960c6bdf61ab7bc350648da6c126e3cf6898d8cd4ddcd3de"},
+]
+starlette = []
+typing-extensions = []
+uvicorn = []
